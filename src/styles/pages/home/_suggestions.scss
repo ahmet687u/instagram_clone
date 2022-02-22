@@ -1,0 +1,32 @@
+.suggestionBx {
+  margin: 20px 0;
+  width: 70%;
+  font-size: 15px;
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+
+  .suggestion {
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 20px 0;
+
+      .link {
+        color: blue
+      }
+    }
+
+    &-image {
+      img {
+        @include createCircle(45px);
+        object-fit: cover;
+      }
+    }
+  }
+}

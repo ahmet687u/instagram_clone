@@ -1,0 +1,27 @@
+.stories {
+  @extend %box;
+  margin: 20px 0;
+  width: 100%;
+
+  .carousel {
+    overflow: hidden;
+    min-height: 90px;
+
+    &_inner {
+      display: flex;
+
+      .item {
+        @extend %flex__center;
+        flex-direction: column;
+        padding: 5px;
+        margin: 0 10px;
+        min-width: 5.5rem;
+
+        .story_name {
+          font-size: 13px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

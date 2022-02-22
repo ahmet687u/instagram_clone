@@ -1,0 +1,104 @@
+.posts {
+  @extend %box;
+  height: 800px;
+  overflow: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__header {
+    padding: 0 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .header__right {
+      display: flex;
+      align-items: center;
+
+      .imageBx {
+        margin-right: 10px;
+      }
+
+      .author__name {
+        font-size: 15px;
+      }
+    }
+
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  &__imageBx {
+    img {
+      width: 100%;
+      object-fit: cover;
+      max-height: 500px;
+    }
+
+    .imageBx__bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+
+      svg {
+        font-size: 22px;
+        cursor: pointer;
+      }
+
+      ul,
+      .dots {
+        display: flex;
+      }
+
+      ul,
+      .dots,
+      .share {
+        flex: 1;
+      }
+
+      ul {
+        li {
+          margin: 0 10px;
+        }
+      }
+
+      .share {
+        text-align: right;
+      }
+
+      .dots {
+        @extend %flex__center;
+        .dot {
+          @include createCircle(7px);
+          background-color: #636e72;
+          margin: 0 5px;
+          cursor: pointer;
+
+          &.active {
+            background-color: #000;
+          }
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    font-size: 14px;
+
+    b {
+      margin: 0 7px;
+    }
+
+    .comments {
+      color: #636e72;
+      font-size: 13px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  }
+}
